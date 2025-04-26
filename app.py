@@ -9,8 +9,15 @@ def main():
     st.text_input("Ask a question about attached pdfs:")
     with st.sidebar:
         st.subheader("Your documents")
-        st.file_uploader("Upload your pdfs here and click on 'process'")
-        st.button("Process")
+        pdf_docs = st.file_uploader("Upload your pdfs here and click on 'process'",accept_multiple_files=True)
+        if st.button("Process"):
+            #get pdf text
+
+
+            #get the text chunks
+
+
+            #create vector storage
 
 if __name__=='__main__':
     main()
