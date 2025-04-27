@@ -11,6 +11,7 @@ def main():
         st.subheader("Your documents")
         pdf_docs = st.file_uploader("Upload your pdfs here and click on 'process'",accept_multiple_files=True)
         if st.button("Process"):
+            with st.spinner("Processing"):
             #get pdf text
 
 
