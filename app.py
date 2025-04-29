@@ -38,7 +38,7 @@ def get_conversation_chain():
     memory = ConversationBufferMemory(memory_key='chat_history',return_messages=True)
     conversation_chain=  ConversationalRetreivalChain.from_llm(
         llm = llm,
-        retriever = vecotrstore.as_retriever(),
+        retriever = vectorstore.as_retriever(),
         memory = memory
     )
     return conversation_chain
