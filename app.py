@@ -33,7 +33,7 @@ def get_vectorstore(text_chunks):
     vectorstore = FAISS.from_texts(texts = text_chunks, embedding = embeddings)
     return vectorstore
 
-def get_conversation_chain():
+def get_conversation_chain(vectorstore):
     llm = ChatOpenAI()
     memory = ConversationBufferMemory(memory_key='chat_history',return_messages=True)
     conversation_chain=  ConversationalRetreivalChain.from_llm(
